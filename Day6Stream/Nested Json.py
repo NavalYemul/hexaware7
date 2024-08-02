@@ -42,7 +42,7 @@ Action
 
 # COMMAND ----------
 
-df1.where("batters_type='Chocolate'").display()
+df1.where("batters_type='Chocolate'").show()
 
 # COMMAND ----------
 
@@ -55,3 +55,5 @@ df1.where("batters_type='Chocolate' and topping_id=5001" ).display()
 # COMMAND ----------
 
 df1.groupBy("topping_type").count().display()
+
+Group it by topping_id
