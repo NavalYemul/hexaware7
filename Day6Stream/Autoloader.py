@@ -99,10 +99,14 @@ df=spark.read.table("datamaster.bronze.autoloader")
 # COMMAND ----------
 
 # MAGIC %sql
-# MAGIC select Country, count(*) from datamaster.bronze.autoloader group by Country
+# MAGIC select Country, count(Country) from datamaster.bronze.autoloader group by Country
 
 # COMMAND ----------
 
-Schema Evolution:
-1. New column---I should get notified (decide-- get a new column or drop the source)
-2.
+# MAGIC %sql
+# MAGIC select * from autoloader
+
+# COMMAND ----------
+
+# MAGIC %md
+# MAGIC This notebook is about Autoloader
